@@ -1,0 +1,95 @@
+body{
+	font-family: 'Didact Gothic', sans-serif;
+	background: green;
+}
+
+#holder{
+	height: 100vh;
+	background-image: url('../img/tourboy2.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
+#map {
+    height: 400px;  /* The height is 400 pixels */
+    width: 100%;  /* The width is the width of the web page */
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container{
+	display: block;
+	padding-top: 100px;
+}
+
+.two{
+	padding-top: 0;
+}
+
+#title{
+	font-size: 80px;
+	margin-left: 90px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#semi-title{
+	font-size: 40px;
+	margin-left: 100px;
+	margin-top: -15px;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+#enclosing{
+	display: flex;
+	justify-content: center;
+}
+
+#search-button{
+	border-radius: 6px;
+	font-size: 16px;
+	height: 50px;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+#option-selector{
+	width: 50%;
+	height: 50px;
+	font-size: 16px;
+	border-radius: 6px;
+	margin-right: 20px;
+	font-family: 'Didact Gothic', sans-serif;
+}
+
+img{
+	display: block;
+	height: 250px;
+	width: 350px;
+	margin-bottom: 25px;
+	margin-right: auto;
+	margin-left: auto;
+	-webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    transition: all 0.6s ease;
+}
+
+img:hover {
+	height: 220px;
+	width: 320px;
+}
+
+.wther{
+	display: block;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.climate{
+	display: block;
+	margin-right: 20px;
+	margin-left: 20px;
+	border-radius: 20px;
+}

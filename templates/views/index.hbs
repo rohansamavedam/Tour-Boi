@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tour Boi</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script type="text/javascript" src="./js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+</head>
+<body style="font-family: 'Didact Gothic', sans-serif; background: rgb(240, 232, 221);">
+    {{!-- <div id="enclosing">
+        {{>header}}
+    </div> --}}
+    <div id="holder">
+        <div class="container">
+            <h1 id="title"><strong>Tour Boi</strong></h1>
+             <p id="semi-title">your tour buddy</p>
+        </div>
+        <div id="enclosing">
+            <select id="option-selector">
+                <option value="">Select Destination</option>
+                <option value="Paris FR">Paris</option>
+                <option value="Yellow-Stone US">Yellow Stone</option>
+                <option value="Rome IT">Rome</option>
+                <option value="Tahiti TH">Tahiti</option>
+                <option value="London GB">London</option>
+                <option value="">More destinations coming soon!</option>
+            </select>
+            <button id="search-button" type="button">Checkout Destination!</button>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <img src="./img/down.png" style="height: 50px; width: 50px;" id="down">
+    </div>
+
+    <br>
+
+    <h3 style="text-align: center; font-size: 40px;">{{location}}</h3>
+
+    <br>
+
+    <div class="container two" id="imgholder">
+        <div class="row">
+            <div class="col"><img src="{{picdata1}}"></div>
+            <div class="col"><img src="{{picdata2}}"></div>
+            <div class="col"><img src="{{picdata3}}"></div>
+        </div>
+        <div class="row">
+            <div class="col"><img src="{{picdata4}}"></div>
+            <div class="col"><img src="{{picdata6}}"></div>
+            <div class="col"><img src="{{picdata5}}"></div>
+        </div>
+        <div class="row">
+            <div class="col"><img src="{{picdata7}}"></div>
+            <div class="col"><img src="{{picdata8}}"></div>
+            <div class="col"><img src="{{picdata9}}"></div>
+        </div>        
+    </div>
+
+    <br>
+
+    <h3 style="text-align: center; font-size: 40px;">Weekly Weather</h3>
+    <br>
+    <h4 style="text-align: center; font-size: 30px;">Summary: {{summary}}</h4>
+    <br>
+
+    <div class="card-group wther">
+        <div class="climate">
+            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;">Date</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+        </div>
+        <div class="climate">
+            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;">Date</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+        </div>
+         <div class="climate">
+            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;">Date</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+        </div>
+         <div class="climate">
+            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;">Date</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+        </div>
+         <div class="climate">
+            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;">Date</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+        </div>
+    </div>
+    {{!-- <div id="weather">
+        <h1>{{dayOneTempMax}}</h1>
+        <h1>{{dayOneTempMin}}</h1>
+        <div>
+            <h1>{{iconOne}}</h1>
+            <img src="./img/{{iconOne}}.png">
+        </div>
+    </div> --}}
+
+    
+    
+    
+    
+    <div><p>{{traveladData}}</p> </div>
+    <div id="map"></div>
+
+
+
+
+
+
+    <script>
+        var latitude = {{lat}}
+        var longitude = {{long}}
+        function initMap() {
+        var uluru = {lat: latitude, lng: longitude};
+        var map = new google.maps.Map(
+            document.getElementById('map'), {zoom: 4, center: uluru});
+        var marker = new google.maps.Marker({position: uluru, map: map});
+        }
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSpNuQk4wQ3HJQR3fvCDvSMozrb_DXCt4&callback=initMap">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
