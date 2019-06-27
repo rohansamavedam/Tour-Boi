@@ -70,7 +70,7 @@ $(document).ready(function() {
           const location1 = location.substring(0, index)
           const ccode = location.substring(index+1)
           console.log(ccode)
-          const url = 'http://localhost:3000/info?address='+location1+'&code='+ccode;
+          const url = '/info?address='+location1+'&code='+ccode;
           window.location.assign(url)
       }else{
         alert('Please select a destiantion')
