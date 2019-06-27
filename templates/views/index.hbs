@@ -65,7 +65,7 @@
 
     <br>
 
-    <h3 style="text-align: center; font-size: 40px;">Weekly Weather</h3>
+    <h3 style="text-align: center; font-size: 40px;text-decoration: underline;">Weekly Weather</h3>
     <br>
     <h4 style="text-align: center; font-size: 30px;">Summary: {{summary}}</h4>
     <br>
@@ -73,49 +73,51 @@
     <div class="card-group wther">
         <div class="climate">
             <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;">Date</h4>
+            <h4 style="text-align: center; font-size: 30px;" id="onetime">{{oneTime}}</h4>
             <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
             <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
         </div>
         <div class="climate">
-            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;">Date</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+            <img src="./img/{{iconTwo}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;" id="twotime">{{twoTime}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayTwoTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayTwoTempMin}}</h4>
         </div>
          <div class="climate">
-            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;">Date</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+            <img src="./img/{{iconThree}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;" id="threetime">{{threeTime}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayThreeTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayThreeTempMin}}</h4>
         </div>
          <div class="climate">
-            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;">Date</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+            <img src="./img/{{iconFour}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;" id="fourtime">{{fourTime}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayFourTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayFourTempMin}}</h4>
         </div>
          <div class="climate">
-            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;">Date</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+            <img src="./img/{{iconFive}}.png" style="height: 150px; width: 150px;">
+            <h4 style="text-align: center; font-size: 30px;" id="fivetime">{{fiveTime}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayFiveTempMax}}</h4>
+            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayFiveTempMin}}</h4>
         </div>
     </div>
-    {{!-- <div id="weather">
-        <h1>{{dayOneTempMax}}</h1>
-        <h1>{{dayOneTempMin}}</h1>
-        <div>
-            <h1>{{iconOne}}</h1>
-            <img src="./img/{{iconOne}}.png">
-        </div>
-    </div> --}}
 
+    <br>
+
+    <h3 style="text-align: center; font-size: 40px; text-decoration: underline;">Travel Advisory</h3>
+
+    <br>
+
+    <h4 style="text-align: center; font-size: 30px;">Summary: According to travel-advisory.info, the rating of safety of {{location}} is <strong>{{traveladData}}/5</strong></h4>
+    <h4 style="text-align: center; font-size: 30px;" id="travelinfo"><strong>{{traveladData}}</strong></h4>
     
-    
-    
-    
-    <div><p>{{traveladData}}</p> </div>
+    <br>
+
+    <h3 style="text-align: center; font-size: 40px; text-decoration: underline;">Map</h3>
+
+    <br>
+
     <div id="map"></div>
 
 
