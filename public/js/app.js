@@ -15,11 +15,11 @@ function myFunction(val) {
 }
 
 function travelVer(val){
-  if(val<2){
+  if(val<=2){
     $('#travelinfo').text('Travel is usually safe')
-  }else if(val>2 && val<3.5){
+  }else if(val>2 && val<=3.5){
     $('#travelinfo').text('Travel with higher caution')
-  }else if(val>3.5 && val<4.5){
+  }else if(val>3.5 && val<=4.5){
     $('#travelinfo').text('Reconsider travelling')
   }else{
     $('#travelinfo').text('Do not travel')
@@ -48,9 +48,15 @@ $(document).ready(function() {
 
     $('#imgholder').hide();
     $('#down').hide();
+    $('#traveled').hide();
+    $('#maped').hide();
+    $('#weathered').hide();
     var pathname = window.location.pathname
     if(pathname.substring(0,5)==='/info'){
       $('#imgholder').show();
+      $('#traveled').show();
+      $('#maped').show();
+      $('#weathered').show();
     }
     // if(pathname.substring())
     $("#search-button").click(function(e) {

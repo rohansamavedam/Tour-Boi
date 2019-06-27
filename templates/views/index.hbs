@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Tour Boi</title>
+    <title>Tour Boi</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script type="text/javascript" src="./js/app.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Didact+Gothic&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.css" rel="stylesheet"> 
 </head>
+
 <body style="font-family: 'Didact Gothic', sans-serif; background: rgb(240, 232, 221);">
     {{!-- <div id="enclosing">
         {{>header}}
@@ -18,16 +22,21 @@
     <div id="holder">
         <div class="container">
             <h1 id="title"><strong>Tour Boi</strong></h1>
-             <p id="semi-title">your tour buddy</p>
+            <p id="semi-title">your tour buddy</p>
         </div>
         <div id="enclosing">
             <select id="option-selector">
                 <option value="">Select Destination</option>
                 <option value="Paris FR">Paris</option>
-                <option value="Yellow-Stone US">Yellow Stone</option>
+                <option value="Yosemite US">Yosemite</option>
                 <option value="Rome IT">Rome</option>
-                <option value="Tahiti TH">Tahiti</option>
+                <option value="NewYork US">New York</option>
                 <option value="London GB">London</option>
+                <option value="Barcelona ES">Barcelona</option>
+                <option value="Dubai AE">Dubai</option>
+                <option value="Sydney AU">Sydney</option>
+                <option value="Amsterdam NL">Amsterdam</option>
+                <option value="India IN">India</option>
                 <option value="">More destinations coming soon!</option>
             </select>
             <button id="search-button" type="button">Checkout Destination!</button>
@@ -36,7 +45,7 @@
         <br>
         <br>
         <br>
-        <img src="./img/down.png" style="height: 50px; width: 50px;" id="down">
+        <h3 class="animated infinite bounce" style="text-align: center; font-size: 40px;" id="down">Loading.....</h3>
     </div>
 
     <br>
@@ -60,61 +69,67 @@
             <div class="col"><img src="{{picdata7}}"></div>
             <div class="col"><img src="{{picdata8}}"></div>
             <div class="col"><img src="{{picdata9}}"></div>
-        </div>        
-    </div>
-
-    <br>
-
-    <h3 style="text-align: center; font-size: 40px;text-decoration: underline;">Weekly Weather</h3>
-    <br>
-    <h4 style="text-align: center; font-size: 30px;">Summary: {{summary}}</h4>
-    <br>
-
-    <div class="card-group wther">
-        <div class="climate">
-            <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;" id="onetime">{{oneTime}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
-        </div>
-        <div class="climate">
-            <img src="./img/{{iconTwo}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;" id="twotime">{{twoTime}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayTwoTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayTwoTempMin}}</h4>
-        </div>
-         <div class="climate">
-            <img src="./img/{{iconThree}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;" id="threetime">{{threeTime}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayThreeTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayThreeTempMin}}</h4>
-        </div>
-         <div class="climate">
-            <img src="./img/{{iconFour}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;" id="fourtime">{{fourTime}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayFourTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayFourTempMin}}</h4>
-        </div>
-         <div class="climate">
-            <img src="./img/{{iconFive}}.png" style="height: 150px; width: 150px;">
-            <h4 style="text-align: center; font-size: 30px;" id="fivetime">{{fiveTime}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayFiveTempMax}}</h4>
-            <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayFiveTempMin}}</h4>
         </div>
     </div>
 
     <br>
+    <div id="weathered">
+        <h3 style="text-align: center; font-size: 40px;text-decoration: underline;">Weekly Weather</h3>
+        <br>
+        <h4 style="text-align: center; font-size: 30px;">Summary: {{summary}}</h4>
+        <br>
 
-    <h3 style="text-align: center; font-size: 40px; text-decoration: underline;">Travel Advisory</h3>
+        <div class="card-group wther">
+            <div class="climate">
+                <img src="./img/{{iconOne}}.png" style="height: 150px; width: 150px;">
+                <h4 style="text-align: center; font-size: 30px;" id="onetime">{{oneTime}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayOneTempMax}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayOneTempMin}}</h4>
+            </div>
+            <div class="climate">
+                <img src="./img/{{iconTwo}}.png" style="height: 150px; width: 150px;">
+                <h4 style="text-align: center; font-size: 30px;" id="twotime">{{twoTime}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayTwoTempMax}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayTwoTempMin}}</h4>
+            </div>
+            <div class="climate">
+                <img src="./img/{{iconThree}}.png" style="height: 150px; width: 150px;">
+                <h4 style="text-align: center; font-size: 30px;" id="threetime">{{threeTime}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayThreeTempMax}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayThreeTempMin}}</h4>
+            </div>
+            <div class="climate">
+                <img src="./img/{{iconFour}}.png" style="height: 150px; width: 150px;">
+                <h4 style="text-align: center; font-size: 30px;" id="fourtime">{{fourTime}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayFourTempMax}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayFourTempMin}}</h4>
+            </div>
+            <div class="climate">
+                <img src="./img/{{iconFive}}.png" style="height: 150px; width: 150px;">
+                <h4 style="text-align: center; font-size: 30px;" id="fivetime">{{fiveTime}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's High: {{dayFiveTempMax}}</h4>
+                <h4 style="text-align: center; font-size: 30px;">Day's Low: {{dayFiveTempMin}}</h4>
+            </div>
+        </div>
 
-    <br>
+        <br>
+    </div>
 
-    <h4 style="text-align: center; font-size: 30px;">Summary: According to travel-advisory.info, the rating of safety of {{location}} is <strong>{{traveladData}}/5</strong></h4>
-    <h4 style="text-align: center; font-size: 30px;" id="travelinfo"><strong>{{traveladData}}</strong></h4>
-    
-    <br>
 
-    <h3 style="text-align: center; font-size: 40px; text-decoration: underline;">Map</h3>
+    <div id="traveled">
+        <h3 style="text-align: center; font-size: 40px; text-decoration: underline;">Travel Advisory</h3>
+
+        <br>
+
+        <h4 style="text-align: center; font-size: 30px;">Summary: According to travel-advisory.info, the rating of
+            safety of {{location}} is <strong>{{traveladData}}/5</strong></h4>
+        <h4 style="text-align: center; font-size: 30px;" id="travelinfo"><strong>{{traveladData}}</strong></h4>
+
+        <br>
+    </div>
+
+
+    <h3 style="text-align: center; font-size: 40px; text-decoration: underline;" id="maped">Map</h3>
 
     <br>
 
@@ -122,24 +137,43 @@
 
 
 
-
+    <footer>
+        <br>
+        <br>
+        <br>
+         <h4 style="text-align: center; font-size: 30px;">Created by Rohan Samavedam | <a href="https://github.com/rohansamavedam/Tour-Boi">Github</a></h4>
+         <h4 style="text-align: center; font-size: 30px;">API's Included:</h4>
+         <h4 style="text-align: center; font-size: 30px;">Dark Sky API</h4>
+         <h4 style="text-align: center; font-size: 30px;">Travel Advisory API</h4>
+         <h4 style="text-align: center; font-size: 30px;">Google Maps API</h4>
+         <h4 style="text-align: center; font-size: 30px;">Pexels API</h4>
+         <br>
+         <br>
+    </footer>
 
 
     <script>
-        var latitude = {{lat}}
-        var longitude = {{long}}
+        var latitude = {{ lat }}
+        var longitude = {{ long }}
         function initMap() {
-        var uluru = {lat: latitude, lng: longitude};
-        var map = new google.maps.Map(
-            document.getElementById('map'), {zoom: 4, center: uluru});
-        var marker = new google.maps.Marker({position: uluru, map: map});
+            var uluru = { lat: latitude, lng: longitude };
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 4, center: uluru });
+            var marker = new google.maps.Marker({ position: uluru, map: map });
         }
     </script>
     <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSpNuQk4wQ3HJQR3fvCDvSMozrb_DXCt4&callback=initMap">
-    </script>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSpNuQk4wQ3HJQR3fvCDvSMozrb_DXCt4&callback=initMap">
+        </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>
